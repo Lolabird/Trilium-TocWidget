@@ -1,17 +1,21 @@
 # Trilium-TocWidget
 
 Table of contents [Trilium](https://github.com/zadam/trilium/) widget for
-editable and readonly text notes.
+editable and readonly text notes originally created by [antoniotejada](https://github.com/antoniotejada/Trilium-TocWidget).
+
+## Tweaks
+- Appears on right panel at 100 height instead of on bottom left
+- Does not appear on non-text notes
 
 ## Screenshot
+![TextNotesOnly](https://user-images.githubusercontent.com/89228316/177449255-9d51e030-817e-4742-a961-f822206c1a68.png)
 
-![image](https://user-images.githubusercontent.com/6446344/164298494-909a51a7-f4db-4e86-9bea-e602a6508254.png)
 
 ## Features
 
-- The ToC is live and automatically updated as new headers are added to the note.
-- Works on editable and readonly text notes.
-- Clicking on the ToC navigates the note.
+- The ToC is live and automatically updated as new headers are added to the note
+- Works on editable and readonly text notes
+- Clicking on the ToC navigates the note
 - Tested on Trilium Desktop 0.50.3
 
 ## Installation
@@ -23,7 +27,7 @@ editable and readonly text notes.
 - noTocWidget: Set on the text notes you don't want to show the ToC for
 ### In the Script Note
 - tocWidgetHeightPct: Percentage of pane height to use, 0 for dynamic, default
-  is 30
+  is 100
 - debugLevel: Enable output to the javascript console, default is "info"
   (without quotes): 
     - "error" no javascript console output
