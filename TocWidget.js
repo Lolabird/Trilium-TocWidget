@@ -2,8 +2,7 @@
  * Table of contents widget
  * (c) Antonio Tejada 2022
  *
- * For text notes, it will place a table of content on the left pane, below the
- * tree.
+ * For text notes, it will place a table of content on the right pane.
  * - The table can't be modified directly but it's automatically updated when
  *   new headings are added to the note
  * - The items in the table can be clicked to navigate the note.
@@ -33,7 +32,7 @@
     return attributeValue;
 }
 
-const tocWidgetHeightPct = getNoteAttributeValue(api.startNote, "label", "tocWidgetHeightPct", 30);
+const tocWidgetHeightPct = getNoteAttributeValue(api.startNote, "label", "tocWidgetHeightPct", 100);
 const alwaysShowWidget = (tocWidgetHeightPct > 0);
 const tocWidgetHeightPctCss = alwaysShowWidget ? `height: ${tocWidgetHeightPct}%;` : "";
 
@@ -187,13 +186,13 @@ class TocWidget extends api.NoteContextAwareWidget {
 
     get parentWidget() {
         log("getParentWidget id " + this.note?.noteId + " ntxId " + this.noteContext?.ntxId);
-        return 'left-pane';
+        return 'right-pane';
     }
 
     isEnabled() {
         log("isEnabled id " + this.note?.noteId + " ntxId " + this.noteContext?.ntxId);
         return super.isEnabled()
-            && (alwaysShowWidget || (this.note.type === 'text'))
+            && ((this.note.type === 'text'))
             && !this.note.hasLabel('noTocWidget');
     }
 
