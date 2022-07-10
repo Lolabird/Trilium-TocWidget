@@ -4,11 +4,14 @@ Table of contents [Trilium](https://github.com/zadam/trilium/) widget for
 editable and readonly text notes originally created by [antoniotejada](https://github.com/antoniotejada/Trilium-TocWidget).
 
 ## Tweaks
-- Appears on right panel at 100 height instead of on bottom left
+- Appears on right panel at 100 height instead of on bottom left at 30 height
 - Does not appear on non-text notes
+- Only appears in text notes if the label #tocWidget is added
+- Child notes that inherit the attribute #tocWidget can remove the widget with #noTocWidget and vice versa
 
 ## Screenshot
 ![TextNotesOnly](https://user-images.githubusercontent.com/89228316/177449255-9d51e030-817e-4742-a961-f822206c1a68.png)
+Theme: [Stellar Dark](https://github.com/Lolabird/stellar-dark-theme-trilium)
 
 
 ## Features
