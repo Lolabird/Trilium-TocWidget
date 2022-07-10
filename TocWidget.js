@@ -192,7 +192,8 @@ class TocWidget extends api.NoteContextAwareWidget {
     isEnabled() {
         log("isEnabled id " + this.note?.noteId + " ntxId " + this.noteContext?.ntxId);
         return super.isEnabled()
-            && ((this.note.type === 'text'))
+            && this.note.type === 'text'
+            && this.note.hasLabel('tocWidget')
             && !this.note.hasLabel('noTocWidget');
     }
 
