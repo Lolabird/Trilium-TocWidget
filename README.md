@@ -1,3 +1,6 @@
+# Update
+The TocWidget is now an official part of Tilium Notes, so no more updates will be made here. 
+
 # Trilium-TocWidget
 
 Table of contents [Trilium](https://github.com/zadam/trilium/) widget for
